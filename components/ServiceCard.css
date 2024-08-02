@@ -1,0 +1,33 @@
+.card .card_content .service_heading {
+    color: #333;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: .5rem;
+    font-weight: 600;
+}
+
+.card .card_content .service_des {
+    color: #444;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card .card_content .service_heading {
+        font-size: 1.2rem;
+    }
+
+    .card .card_content .service_des {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card .card_content .service_heading {
+        font-size: 1.1rem;
+    }
+
+    .card .card_content .service_des {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,116 @@
+.nav_container {
+    padding: 2rem;
+    background: #fff;
+    height: 5rem;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space out items */
+    border-bottom: 1px solid #f1f1f1;
+    overflow: hidden;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1;
+}
+
+.links {
+    position: relative;
+    display: flex;
+}
+
+.link {
+    color: #333;
+    font-size: 1rem;
+    padding: .2rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+}
+
+.link:hover {
+    color: purple;
+    background: transparent;
+    border-color: #eee;
+}
+
+.navbar_icon {
+    display: none;
+    cursor: pointer;
+}
+
+.links_active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5.5rem; /* Adjust based on your navbar height */
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    border-radius: .5rem;
+    z-index: 1000; /* Ensure the menu is above other content */
+    text-align: center;
+}
+
+.links_active .link {
+    padding: .5rem;
+    border: 1px solid #eee;
+    margin: .2rem 0;
+    border-radius: .5rem;
+}
+
+.links_active .link:hover {    
+    background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: animate 10s linear infinite;
+    border-color: purple;
+}
+
+/* Default styles for small devices */
+
+@media (max-width:1024px){
+    .links{
+        margin-left: -10rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .links {
+        display: none;
+    }
+
+    .navbar_icon {
+        display: block;
+    }
+}
+
+/* Styles for medium devices (tablets) */
+@media (max-width: 768px) {
+    .nav_container {
+        padding: 1rem;
+    }
+
+    .link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .links_active {
+        top: 4rem; /* Adjust based on your navbar height */
+    }
+}
+
+/* Styles for small devices (mobile phones) */
+@media (max-width: 480px) {
+    .link {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .links_active {
+        padding: 0.5rem;
+    }
+}
